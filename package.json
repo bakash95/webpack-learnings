@@ -1,0 +1,16 @@
+{
+  "name": "webpack-learnings",
+  "version": "1.0.0",
+  "description": "webpack personal learning",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "akash",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  }
+}
