@@ -5,9 +5,10 @@ const cleanOutputFolder = require('clean-webpack-plugin')["CleanWebpackPlugin"]
 console.log('webpack config ran')
 
 module.exports = {
-    entry: { home: './src/index.js', copyHome: './src/index.js' },
+    entry: { home: './src/index.js', newModule: './src/newModule.js' },
     output: {
         filename: '[name].bundle.js',
+        chunkFilename:'[name].bundle.js',
         path: path.resolve(__dirname, 'build'),
     },
     plugins: [
@@ -28,5 +29,10 @@ module.exports = {
                 ]
             }
         ]
+    },
+    optimization:{
+        splitChunks:{
+            chunks : 'all'
+        }
     }
 };
