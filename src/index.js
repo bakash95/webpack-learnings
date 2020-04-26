@@ -1,8 +1,16 @@
-import _ from 'lodash'
 import './css/myStyle.css'
+import React from 'react'
+import {debounce} from './newModule'
 
-function variable() {
-    _.debounce(() => {
-        console.log('hi howdy')
-    });
-}
+(function () {
+
+    import(/* webpackChunkName: "lodash" ,webpackPrefetch: true*/ 'lodash').then(({ default: _ }) => {
+        _.debounce(() => {
+            console.log('hi howdy hi')
+        }, 2000);
+    }).catch((error) => {
+        console.log('error ', error)
+    })
+})();
+
+debounce();
