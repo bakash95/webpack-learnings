@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "webpack personal learning",
   "private": true,
+  "sideEffects":[
+    "*.css"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --env.NODE_ENV=production",
