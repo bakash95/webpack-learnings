@@ -5,7 +5,7 @@ import {debounce} from './newModule'
 (function () {
 
     import(/* webpackChunkName: "lodash" ,webpackPrefetch: true*/ 'lodash').then(({ default: _ }) => {
-        _.debounce(() => {
+        debounce(() => {
             console.log('hi howdy hi')
         }, 2000);
     }).catch((error) => {
